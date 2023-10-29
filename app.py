@@ -186,7 +186,7 @@ def main(page: Page):
                                 f'{_current_city.json()[0]["name"]} , {_current_city.json()[0]["country"]}',
                                 size=16,
                                 weight="w500",
-                            )
+                            ),
                         ],
                     ),
                     Container(
@@ -225,7 +225,6 @@ def main(page: Page):
                                                 content=Text(
                                                     _today[0],  # 気温
                                                     size=52,
-
                                                 ),
                                             ),
                                             Container(
@@ -233,7 +232,6 @@ def main(page: Page):
                                                     "°",
                                                     size=28,
                                                     text_align="center",
-
                                                 ),
                                             ),
                                         ],
@@ -359,13 +357,13 @@ def main(page: Page):
                                 Container(
                                     alignment=alignment.center,
                                     content=Text(
-                                        days.len([
+                                        days[
                                             datetime.datetime.weekday(
                                                 datetime.datetime.fromtimestamp(
                                                     _current.json()["daily"][index]["dt"],
                                                 ),
                                             ),
-                                        ]),
+                                        ],
                                     ),
                                 ),
                             ],
@@ -427,9 +425,9 @@ def main(page: Page):
                                             ),
                                         ],
                                     ),
-                                )
-                            ]
-                        )
+                                ),
+                            ],
+                        ),
                     ],
                 ),
             )
